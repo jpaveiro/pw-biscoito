@@ -1,0 +1,13 @@
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { ImagemComponent } from './components/imagem/imagem.component';
+
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet, ImagemComponent],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss'
+})
+export class AppComponent {
+  title = 'pw3-biscoito';
+}
