@@ -3,4 +3,5 @@ Atividade de PW
 
 Integrantes:
 João Pedro Aveiro
+<br>
 Yasmin Kondo
