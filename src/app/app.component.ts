@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { ImagemComponent } from './components/imagem/imagem.component';
-import { FrasesComponent } from "./components/frases/frases.component";
 
 @Component({
   selector: 'app-root',
-  imports: [ImagemComponent, FrasesComponent],
+  imports: [ImagemComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
