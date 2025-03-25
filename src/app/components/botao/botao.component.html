@@ -1,0 +1,8 @@
+<div class="container">
+    <app-biscoito [aberto]="biscoitoAberto"></app-biscoito>
+    <app-frases
+        [mostrarMensagem]="mostrarMensagem">
+    </app-frases>
+    <button (click)="quebrarBiscoito()" class="botao">Quebrar biscoito</button>
+    <button (click)="reiniciarBiscoito()" class="secundario">Reiniciar biscoito</button>
+</div>

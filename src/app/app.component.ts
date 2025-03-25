@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { ImagemComponent } from './components/imagem/imagem.component';
+import { BotaoComponent } from "./components/botao/botao.component";
 
 @Component({
   selector: 'app-root',
-  imports: [ImagemComponent],
+  imports: [BotaoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, SimpleChanges  } from '@angular/core';
 
 @Component({
   selector: 'app-frases',
@@ -7,14 +7,25 @@ import { Component, Input } from '@angular/core';
   styleUrl: './frases.component.scss'
 })
 export class FrasesComponent {
-  phrases: string[] = ["O café está quente.", "Preciso dormir cedo.", "O sol nasceu forte hoje.",
+  frases: string[] = ["O café está quente.", "Preciso dormir cedo.", "O sol nasceu forte hoje.",
     "Esqueci minha senha de novo.", "A música está muito alta.", "Quero viajar neste fim de semana.",
     "O cachorro latiu a noite toda.", "A bateria do celular acabou rápido.", "Choveu bastante ontem.",
     "O tempo passou voando."]
-  drawnPhrase: string = ""
+  fraseAleatoria: string = ""
+  @Input() mostrarMensagem : boolean = false;
 
-  public randomPhrase() : void {
-    this.drawnPhrase = this.phrases[Math.floor(Math.random() * this.phrases.length)]
+  ngOnChanges(changes: SimpleChanges): void
+  {
+    if (changes['mostrarMensagem']) {
+      this.ocultarOuExibirFrase();
+    }
+  }
+
+  public ocultarOuExibirFrase() : void
+  {
+    if (this.mostrarMensagem)
+      this.fraseAleatoria = this.frases[Math.floor(Math.random() * this.frases.length)];
+    else
+      this.fraseAleatoria = ""
   }
 }
-
