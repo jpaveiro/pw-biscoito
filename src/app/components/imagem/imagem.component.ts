@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { opendir } from 'node:fs';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-imagem',
@@ -8,13 +7,5 @@ import { opendir } from 'node:fs';
   styleUrl: './imagem.component.scss'
 })
 export class ImagemComponent {
-  cookieImage: string = "/biscoito-aberto.png"
-
-  public swapCookie() : void
-  {
-    const opened = "/biscoito-aberto.png"
-    const closed = "/biscoito.png"
-
-    this.cookieImage = (this.cookieImage == opened) ? closed : opened;
-  }
+  @Input() linkImg: string = "";
 }
